@@ -58,3 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# For LazyDonkey Project
+Assets/Steam*/
+Assets/Steam*
+Assets/Streaming*
+.DS_Store
