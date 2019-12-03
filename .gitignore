@@ -62,7 +62,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 # For LazyDonkey Project
-Assets/Steam*/
-Assets/Steam*
+Assets/SteamVR_*/
+Assets/SteamVR_*
 Assets/Streaming*
 .DS_Store
