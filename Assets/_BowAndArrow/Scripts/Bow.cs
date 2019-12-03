@@ -32,6 +32,14 @@ public class Bow : MonoBehaviour
 
     private void Update()
     {
+        // Testing purposes
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Debug.Log("X pressed");
+            m_PullValue = 0.75f;
+            Release();
+        }
+
         // Hand not pulling or an arrow doesn't exist
         if(!m_PullingHand || !m_CurrentArrow)   
         {
@@ -94,7 +102,7 @@ public class Bow : MonoBehaviour
     public void Release()
     {
         // Pulled a quarter of the way
-        if(m_PullValue > 0.25f)
+        if (m_PullValue > 0.25f)
         {
             FireArrow();
         }

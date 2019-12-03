@@ -4,6 +4,7 @@ public class Arrow : MonoBehaviour
 {
     public float m_Speed = 2000.0f;             // Arrow speed
     public Transform m_Tip = null;              // Reference to arrow tip
+    //public Transform m_Tip = null;              // Reference to arrow tip
 
     private Rigidbody m_Rigidbody = null;       // Rigidbody attached to arrow
     private bool m_IsStopped = true;            // Flag for if the arrow is flying
@@ -14,7 +15,8 @@ public class Arrow : MonoBehaviour
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
-    }
+        m_Tip = transform.GetChild(0).GetChild(1).GetComponent<Transform>();              // Reference to arrow tip
+}
 
     private void FixedUpdate()
     {
