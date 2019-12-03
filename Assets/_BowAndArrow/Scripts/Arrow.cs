@@ -29,6 +29,7 @@ public class Arrow : MonoBehaviour
         // Collision
         if(Physics.Linecast(m_LastPosition, m_Tip.position))
         {
+            Debug.Log("Stopping");
             Stop();
         }
 
