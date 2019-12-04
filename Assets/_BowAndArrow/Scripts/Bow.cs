@@ -35,7 +35,7 @@ public class Bow : MonoBehaviour
         // Testing purposes
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Debug.Log("X pressed");
+            //Debug.Log("X pressed");
             m_PullValue = 0.75f;
             Release();  
         }
@@ -120,7 +120,7 @@ public class Bow : MonoBehaviour
 
     private void FireArrow()
     {
-        Debug.Log("Fire Arrow: ", m_CurrentArrow);
+        //Debug.Log("Fire Arrow: ", m_CurrentArrow);
         m_CurrentArrow.Fire(m_PullValue);
         m_CurrentArrow = null;
     }

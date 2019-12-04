@@ -16,7 +16,7 @@ public class Arrow : MonoBehaviour
     {
         m_Rigidbody = GetComponent<Rigidbody>();
         //m_Tip = transform.GetChild(0).GetChild(1).GetComponent<Transform>();              // Reference to arrow tip
-}
+    }
 
     private void FixedUpdate()
     {
