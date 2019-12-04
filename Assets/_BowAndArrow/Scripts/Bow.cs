@@ -5,6 +5,7 @@ public class Bow : MonoBehaviour
 {
     [Header("Assets")]
     public GameObject m_ArrowPrefab = null;
+    public GameObject m_FireArrowPrefab = null;
 
 
     [Header("Bow")]
@@ -19,6 +20,9 @@ public class Bow : MonoBehaviour
     private Animator m_Animator = null;
 
     private float m_PullValue = 0.0f;
+    private int m_countToNextFireArrow;
+    private int maxInterval = 10;
+
 
     private void Awake()
     {
@@ -28,6 +32,8 @@ public class Bow : MonoBehaviour
     private void Start()
     {
         StartCoroutine(CreateArrow(0.0f));
+        m_countToNextFireArrow = Random.Range(1, maxInterval);
+        Debug.Log("Counter: " + m_countToNextFireArrow);
     }
 
     private void Update()
@@ -72,7 +78,7 @@ public class Bow : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         // Create, child to socket
-        GameObject arrowObject = Instantiate(m_ArrowPrefab, m_Socket);
+        GameObject arrowObject = createArrowHelper();
 
         // Orient - end of arrow sitting on string
         arrowObject.transform.localPosition = new Vector3(0, 0, 0.425f);
@@ -80,6 +86,24 @@ public class Bow : MonoBehaviour
 
         // Set
         m_CurrentArrow = arrowObject.GetComponent<Arrow>();
+    }
+
+
+    private GameObject createArrowHelper()
+    {
+        GameObject arrow;
+        m_countToNextFireArrow--;
+        if(m_countToNextFireArrow <= 0)
+        {
+            arrow = Instantiate(m_FireArrowPrefab, m_Socket);
+            m_countToNextFireArrow = Random.Range(1, maxInterval);
+            Debug.Log("Counter: " + m_countToNextFireArrow);
+        } else
+        {
+            arrow = Instantiate(m_ArrowPrefab, m_Socket);
+        }
+
+        return arrow;
     }
 
 

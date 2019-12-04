@@ -18,10 +18,9 @@ public class Cylinder : MonoBehaviour
 
 	void OnTriggerEnter(Collider col)
 	{
-		Debug.Log("Something colliding! " + col.gameObject.name);
         if(col.gameObject.tag == "FireArrow")
         {
-			Debug.Log("Hello from collider");
+            Firepit.instance.igniteFlame();   
 		}
 		
 	}

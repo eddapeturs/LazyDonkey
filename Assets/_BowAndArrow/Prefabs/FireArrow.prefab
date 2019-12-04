@@ -122,9 +122,9 @@ GameObject:
   - component: {fileID: 4086743000292619854}
   - component: {fileID: 5509991328502552229}
   - component: {fileID: 6223868130374480976}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tip
-  m_TagString: Untagged
+  m_TagString: FireArrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6223868130374480975}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.013795684
   m_Height: 0.094175205
   m_Direction: 1
@@ -278,6 +278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireSmall
       objectReference: {fileID: 0}
+    - target: {fileID: 105996, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 440108, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -353,6 +357,14 @@ PrefabInstance:
     - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 156090, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 173482, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 19861084, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
