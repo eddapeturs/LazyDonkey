@@ -37,7 +37,7 @@ public class Bow : MonoBehaviour
         {
             Debug.Log("X pressed");
             m_PullValue = 0.75f;
-            Release();
+            Release();  
         }
 
         // Hand not pulling or an arrow doesn't exist
@@ -120,6 +120,7 @@ public class Bow : MonoBehaviour
 
     private void FireArrow()
     {
+        Debug.Log("Fire Arrow: ", m_CurrentArrow);
         m_CurrentArrow.Fire(m_PullValue);
         m_CurrentArrow = null;
     }
