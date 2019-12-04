@@ -2928,7 +2928,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ArrowPrefab
       value: 
-      objectReference: {fileID: 8542102953145869890, guid: 5c51937e899ec9443a1757aefe9d49cb,
+      objectReference: {fileID: 8542102953145869890, guid: ec848ffad68cb446ba9b246c5f10a608,
         type: 3}
     - target: {fileID: 705318187586076703, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
         type: 3}
@@ -5219,7 +5219,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ArrowPrefab
       value: 
-      objectReference: {fileID: 8542102953145869890, guid: 5c51937e899ec9443a1757aefe9d49cb,
+      objectReference: {fileID: 8542102953145869890, guid: ec848ffad68cb446ba9b246c5f10a608,
         type: 3}
     - target: {fileID: 705318187586076703, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
         type: 3}
