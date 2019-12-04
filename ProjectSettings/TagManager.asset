@@ -7,6 +7,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - Fire
+  - FireArrow
   layers:
   - Default
   - TransparentFX

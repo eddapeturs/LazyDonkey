@@ -36,7 +36,7 @@ public class Bow : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             //Debug.Log("X pressed");
-            m_PullValue = 0.75f;
+            m_PullValue = 1.0f;
             Release();  
         }
 
