@@ -3,17 +3,18 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
-    [Header("Assets")]
+    [Header("Arrows")]
     public GameObject m_ArrowPrefab = null;
     public GameObject m_FireArrowPrefab = null;
 
+    [Header("Sounds")]
+    public AudioClip releaseSound;
 
     [Header("Bow")]
     public float m_GrabThreshold = 0.15f;
     public Transform m_Start = null;
     public Transform m_End = null;
     public Transform m_Socket = null;
-
 
     private Transform m_PullingHand = null;         // Close to the notch when trigger is pulled
     private Arrow m_CurrentArrow = null;            // 
@@ -34,6 +35,7 @@ public class Bow : MonoBehaviour
         StartCoroutine(CreateArrow(0.0f));
         m_countToNextFireArrow = Random.Range(1, maxInterval);
         Debug.Log("Counter: " + m_countToNextFireArrow);
+
     }
 
     private void Update()
@@ -126,6 +128,7 @@ public class Bow : MonoBehaviour
     public void Release()
     {
         // Pulled a quarter of the way
+        AudioSource.PlayClipAtPoint(releaseSound, transform.position);
         if (m_PullValue > 0.1f)
         {
             FireArrow();
@@ -145,6 +148,7 @@ public class Bow : MonoBehaviour
     private void FireArrow()
     {
         //Debug.Log("Fire Arrow: ", m_CurrentArrow);
+        
         m_CurrentArrow.Fire(m_PullValue);
         m_CurrentArrow = null;
     }

@@ -6,9 +6,12 @@ public class Firepit : MonoBehaviour
 {
     public static Firepit instance;
 
+    public AudioClip fireLitSound;
+
     private GameObject FullFire;
 	private GameObject HalfFire;
 	private GameObject Smoke;
+
 
     public float timer;
     public float initialTimer;
@@ -58,6 +61,7 @@ public class Firepit : MonoBehaviour
 
     public void igniteFlame()
 	{
+        AudioSource.PlayClipAtPoint(fireLitSound, transform.position);
         Debug.Log("Inside ignite flame");
         Smoke.SetActive(false);
         HalfFire.SetActive(false);
