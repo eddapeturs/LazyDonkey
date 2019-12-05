@@ -8682,7 +8682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4664955646988364, guid: 1e33baa745acb3240be70da0df7523c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.16
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4664955646988364, guid: 1e33baa745acb3240be70da0df7523c7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15557,7 +15557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &887569506
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31619,6 +31619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27814a760f3964b51b39ad66f067cb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireLitSound: {fileID: 8300000, guid: 7648dd35183a645708678e7209c53317, type: 3}
   timer: 0
   initialTimer: 0
 --- !u!1001 &1611910215
