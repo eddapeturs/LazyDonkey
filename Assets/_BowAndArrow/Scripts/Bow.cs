@@ -126,7 +126,7 @@ public class Bow : MonoBehaviour
     public void Release()
     {
         // Pulled a quarter of the way
-        if (m_PullValue > 0.25f)
+        if (m_PullValue > 0.1f)
         {
             FireArrow();
         }
