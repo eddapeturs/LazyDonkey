@@ -18,9 +18,12 @@ public class WolfHit : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-
-        Destroy(col.gameObject, 0.2f);
-        Destroy(transform.parent.gameObject, 0.2f);
+        if(col.gameObject.tag == "FireArrow")
+        {
+            Destroy(col.gameObject, 0.2f);
+            Destroy(transform.parent.gameObject, 0.2f);
+        }
+        
     }
 
 }
