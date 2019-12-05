@@ -91,7 +91,7 @@ public class Firepit : MonoBehaviour
 
     public void igniteFlame()
     {
-        AudioSource.PlayClipAtPoint(fireLitSound, transform.position);
+        AudioSource.PlayClipAtPoint(fireLitSound, new Vector3(0, 0, 0));
         setActiveFire();
         GetRandomTimer();
     }
