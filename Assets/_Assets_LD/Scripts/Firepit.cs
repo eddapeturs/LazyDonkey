@@ -51,13 +51,14 @@ public class Firepit : MonoBehaviour
 
     void GetRandomTimer()
     {
-        timer = Random.Range(10f, 100f);
+        timer = Random.Range(10f, 20f);
         initialTimer = timer;
     }
 
 
     public void igniteFlame()
 	{
+        Debug.Log("Inside ignite flame");
         Smoke.SetActive(false);
         HalfFire.SetActive(false);
         FullFire.SetActive(true);

@@ -18,8 +18,10 @@ public class Cylinder : MonoBehaviour
 
 	void OnTriggerEnter(Collider col)
 	{
+        Debug.Log("Hello from cylinder");
         if(col.gameObject.tag == "FireArrow")
         {
+            Debug.Log("Fire!");
             Firepit.instance.igniteFlame();   
 		}
 		
