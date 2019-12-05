@@ -349,11 +349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 440108, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.009
       objectReference: {fileID: 0}
     - target: {fileID: 440108, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 440108, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -403,6 +403,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 19823612, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -442,6 +450,18 @@ PrefabInstance:
     - target: {fileID: 19861084, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19861084, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 19861084, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19861084, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}

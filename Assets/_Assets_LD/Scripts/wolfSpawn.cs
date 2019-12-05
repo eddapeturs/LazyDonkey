@@ -60,6 +60,6 @@ public class wolfSpawn : MonoBehaviour
 
     void GetRandomTimer()
     {
-        timer = Random.Range(1f, 5f);
+        timer = Random.Range(5f, 50f);
     }
 }

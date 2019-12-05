@@ -35,7 +35,7 @@ public class Firepit : MonoBehaviour
         Smoke = transform.Find("Smoke").gameObject;
 
         // Finding and tracking lightsource
-        light = gameObject.transform.Find("Point Light").gameObject.GetComponent<Light>();
+        light = transform.Find("Point Light").gameObject.GetComponent<Light>();
 
 
         // Finding and adding Nav Mesh Object
