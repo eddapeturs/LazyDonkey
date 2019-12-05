@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - Fire
   - FireArrow
+  - Firepit
   layers:
   - Default
   - TransparentFX

@@ -5,18 +5,32 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
   public static GameManager instance;
-  public bool IsStarted;
+  public bool IsStarted = true; // Is set when all bonfires get lid. // Think about having event trigger.
 
   // Start is called before the first frame update
   void Start()
   {
-    // Is set when all bonfires get lid.
-    IsStarted = false;
+    instance = this;
   }
 
   // Update is called once per frame
   void Update()
   {
-
+    if (!IsStarted)
+    {
+      Checkfirepits();
+    }
   }
+
+  void Checkfirepits()
+  {
+    var objects = GameObject.FindGameObjectsWithTag("Firepit");
+    if (objects == null) return;
+    foreach (var item in objects)
+    {
+      if (!item.GetComponent<Firepit>().FireOn) return;
+    }
+    IsStarted = true;
+  }
+
 }

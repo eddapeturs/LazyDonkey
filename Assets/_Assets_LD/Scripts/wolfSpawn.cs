@@ -42,16 +42,13 @@ public class wolfSpawn : MonoBehaviour
         Vector3 pos = RandomCircle(50.0f , a);
         //wolf = Instantiate(m_WolfPrefab, gameObject.transform, false);
         wolf = Instantiate(m_WolfPrefab, pos, Quaternion.identity);
-        //Vector3 pos = wolf.transform.position;
         //wolf.transform.position = new Vector3(pos.x + xAdd, pos.y + 1, pos.z + xAdd);
-        wolf.transform.Rotate(new Vector3(-90,180, a));
+        wolf.transform.Rotate(new Vector3(-90, 180, a));
         wolf.transform.parent = transform;
     }
 
     Vector3 RandomCircle(float radius, int a)
     {
-        Debug.Log("Wolf no: " + counter++);
-        Debug.Log("A: " + a);
         float ang = a;
         Vector3 pos;
         pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
@@ -63,6 +60,6 @@ public class wolfSpawn : MonoBehaviour
 
     void GetRandomTimer()
     {
-        timer = Random.Range(1f, 10f);
+        timer = Random.Range(1f, 5f);
     }
 }

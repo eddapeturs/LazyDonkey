@@ -8,7 +8,7 @@ using System;
 [RequireComponent(typeof(MeshCollider))]
 public class Enemy : Target
 {
-  public float Moverate;
+  //public float Moverate;
 
   public float DPS;
   public float Damage;
