@@ -94,16 +94,16 @@ public class Bow : MonoBehaviour
     private GameObject createArrowHelper()
     {
         GameObject arrow;
-        m_countToNextFireArrow--;
-        if(m_countToNextFireArrow <= 0)
-        {
+        //m_countToNextFireArrow--;
+        //if(m_countToNextFireArrow <= 0)
+        //{
             arrow = Instantiate(m_FireArrowPrefab, m_Socket);
-            m_countToNextFireArrow = Random.Range(1, maxInterval);
-            Debug.Log("Counter: " + m_countToNextFireArrow);
-        } else
-        {
-            arrow = Instantiate(m_ArrowPrefab, m_Socket);
-        }
+        //    m_countToNextFireArrow = Random.Range(1, maxInterval);
+        //    Debug.Log("Counter: " + m_countToNextFireArrow);
+        //} else
+        //{
+        //    arrow = Instantiate(m_ArrowPrefab, m_Socket);
+        //}
 
         return arrow;
     }
