@@ -30,9 +30,9 @@ public class Firepit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FullFire = gameObject.transform.Find("Fire").gameObject;
-        HalfFire = gameObject.transform.Find("SmallerFire").gameObject;
-        Smoke = gameObject.transform.Find("Smoke").gameObject;
+        FullFire = transform.Find("Fire").gameObject;
+        HalfFire = transform.Find("SmallerFire").gameObject;
+        Smoke = transform.Find("Smoke").gameObject;
 
         // Finding and tracking lightsource
         light = gameObject.transform.Find("Point Light").gameObject.GetComponent<Light>();

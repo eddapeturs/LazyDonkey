@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Cylinder : MonoBehaviour
 {
+
+   
+
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -21,8 +25,8 @@ public class Cylinder : MonoBehaviour
         Debug.Log("Hello from cylinder");
         if(col.gameObject.tag == "FireArrow")
         {
-            Debug.Log("Fire!");
-            Firepit.instance.igniteFlame();   
+            Debug.Log("Fire! " + transform.parent.name);
+            transform.parent.GetComponent<Firepit>().igniteFlame();   
 		}
 		
 	}
