@@ -97,7 +97,8 @@ public class Firepit : MonoBehaviour
     }
 
     private void setActiveFire()
-    {   
+    {
+        Debug.Log("Setting fire for : " + gameObject.name);
         Smoke.SetActive(false);
         HalfFire.SetActive(false);
         FullFire.SetActive(true);
