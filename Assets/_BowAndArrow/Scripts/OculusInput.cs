@@ -4,18 +4,38 @@ using UnityEngine;
 // using OVR;
 
 public class OculusInput : MonoBehaviour
-{ 
-    public Bow m_Bow = null;
-    public GameObject m_OppositeController = null;
-    public OVRInput.Controller m_Controller = OVRInput.Controller.None;
+{
+  public Bow m_Bow = null;
 
-    private void Update()
+  public GameObject player;
+  private GameObject m_OppositeController;
+  private OVRInput.Controller m_Controller;
+
+
+  private void Awake()
+  {
+    if (player == null)
     {
-        if(OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, m_Controller))
-            m_Bow.Pull(m_OppositeController.transform);
-
-        if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, m_Controller))
-            m_Bow.Release();
+      player = GameObject.FindGameObjectWithTag("Player");
     }
-  
+  }
+
+  private void Update()
+  {
+    if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, m_Controller))
+      m_Bow.Pull(m_OppositeController.transform);
+
+    if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, m_Controller))
+      m_Bow.Release();
+  }
+
+
+  private void _pickController()
+  {
+    if (player)
+    {
+
+    }
+  }
+
 }
