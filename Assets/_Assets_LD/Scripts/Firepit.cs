@@ -20,6 +20,8 @@ public class Firepit : MonoBehaviour
 
     private NavMeshObstacle nmo;
     private Light light;
+    private float lightRange;
+
 
     // Called before start
     private void Awake()
@@ -36,7 +38,7 @@ public class Firepit : MonoBehaviour
 
         // Finding and tracking lightsource
         light = transform.Find("Point Light").gameObject.GetComponent<Light>();
-
+        lightRange = light.range;
 
         // Finding and adding Nav Mesh Object
         nmo = gameObject.GetComponent<NavMeshObstacle>();
@@ -66,7 +68,7 @@ public class Firepit : MonoBehaviour
             HalfFire.SetActive(false);
             Smoke.SetActive(true);
             nmo.enabled = false;
-
+            FireOn = false;
             //light.intensity = 0; // Initial lighsource intensity of 10
             light.enabled = false;
         }
@@ -75,7 +77,7 @@ public class Firepit : MonoBehaviour
             FullFire.SetActive(false);
             HalfFire.SetActive(true);
             LowFire = true;
-            light.range = 5;
+            light.range /= 2;
             //light.intensity = 5; // Initial lighsource intensity of 10
             //return;
         }
@@ -92,6 +94,10 @@ public class Firepit : MonoBehaviour
     public void igniteFlame()
     {
         AudioSource.PlayClipAtPoint(fireLitSound, new Vector3(0, 0, 0));
+        light.enabled = true;
+        nmo.enabled = true;
+        FireOn = true;
+        light.range = lightRange;
         setActiveFire();
         GetRandomTimer();
     }

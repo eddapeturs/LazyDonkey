@@ -148,7 +148,7 @@ public class Bow : MonoBehaviour
     private void FireArrow()
     {
         //Debug.Log("Fire Arrow: ", m_CurrentArrow);
-        
+        // TODO keeps getting nullreference error here
         m_CurrentArrow.Fire(m_PullValue);
         m_CurrentArrow = null;
     }
