@@ -32,7 +32,7 @@ public class OculusInput : MonoBehaviour
 
   private void _pickController()
   {
-    if (player)
+    if ()
     {
 
     }
