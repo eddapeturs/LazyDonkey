@@ -19,6 +19,11 @@ public class Bow : MonoBehaviour
   public Transform m_Socket = null;
 
 
+ [Header("Hands")]
+ private GameObject leftHand;
+  private GameObject rightHand;
+
+
   private Transform m_PullingHand = null;         // Close to the notch when trigger is pulled
   private Arrow m_CurrentArrow = null;            // 
   private Animator m_Animator = null;
@@ -31,6 +36,8 @@ public class Bow : MonoBehaviour
   private void Awake()
   {
     m_Animator = GetComponent<Animator>();
+    leftHand = GameObject.FindGameObjectWithTag("LeftHand");
+    rightHand = GameObject.FindGameObjectWithTag("RightHand");
   }
 
   private void Start()
@@ -131,10 +138,11 @@ public class Bow : MonoBehaviour
   public void Release()
   {
     // Pulled a quarter of the way
-    AudioSource.PlayClipAtPoint(releaseSound, transform.position);
-    if (m_PullValue > 0.1f)
+
+    if (m_PullValue > 0.3f)
     {
       FireArrow();
+      AudioSource.PlayClipAtPoint(releaseSound, transform.position);
     }
 
     m_PullingHand = null;
