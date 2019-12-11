@@ -9,6 +9,9 @@ TagManager:
   - Fire
   - FireArrow
   - Firepit
+  - Bow
+  - RightHand
+  - LeftHand
   layers:
   - Default
   - TransparentFX
