@@ -301,7 +301,7 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 0
-  m_snapOffset: {fileID: 392744418}
+  m_snapOffset: {fileID: 0}
   m_grabPoints: []
 --- !u!136 &19315231
 CapsuleCollider:
@@ -6423,7 +6423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &392744418
 Transform:
   m_ObjectHideFlags: 0
