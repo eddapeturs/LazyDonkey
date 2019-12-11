@@ -312,6 +312,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speed: 1300
   m_Tip: {fileID: 8386148805111352677}
+  sparkEffect: {fileID: 997501125151612984, guid: 694ab9f73a91c49659275da5971ff174,
+    type: 3}
 --- !u!54 &3544760493190169588
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -399,18 +401,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 19823612, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -451,11 +441,23 @@ PrefabInstance:
       propertyPath: VelocityModule.speedModifier.scalar
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 173482, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 156090, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 156090, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+    - target: {fileID: 173482, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}

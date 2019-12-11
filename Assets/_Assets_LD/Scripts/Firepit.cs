@@ -50,11 +50,14 @@ public class Firepit : MonoBehaviour
             GetRandomTimer();
             FullFire.SetActive(true);
             Smoke.SetActive(false);
+        } else
+        {
+            Smoke.SetActive(true);
+            HalfFire.SetActive(false);
+            FullFire.SetActive(false);
         }
 
-        Smoke.SetActive(false);
-        HalfFire.SetActive(false);
-        FullFire.SetActive(true);
+
         //light.intensity = 10; // Initial lighsource intensity of 10
     }
 

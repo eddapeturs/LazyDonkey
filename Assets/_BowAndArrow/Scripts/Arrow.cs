@@ -10,6 +10,9 @@ public class Arrow : MonoBehaviour
     private bool m_IsStopped = true;            // Flag for if the arrow is flying
     private Vector3 m_LastPosition = Vector3.zero;
 
+    [Header("Effect")]
+    public GameObject sparkEffect = null;
+
 
 
     private void Awake()
@@ -32,6 +35,7 @@ public class Arrow : MonoBehaviour
         if(Physics.Linecast(m_LastPosition, m_Tip.position))
         {
             Debug.Log("Stopping");
+            Instantiate(sparkEffect, transform.position, transform.rotation);
             Stop();
         }
 
