@@ -64,5 +64,8 @@ crashlytics-build.properties
 # For LazyDonkey Project
 Assets/SteamVR_*/
 Assets/SteamVR_*
+
 Assets/Streaming*
 .DS_Store
+.idea/
+Assets/Plugins/*

@@ -80,7 +80,8 @@ public class Firepit : MonoBehaviour
             FullFire.SetActive(false);
             HalfFire.SetActive(true);
             LowFire = true;
-            light.range /= 2;
+            light.range = 4;
+            //light.intensity = 4;
             //light.intensity = 5; // Initial lighsource intensity of 10
             //return;
         }
