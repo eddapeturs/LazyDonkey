@@ -69,3 +69,4 @@ Assets/Streaming*
 .DS_Store
 .idea/
 Assets/Plugins/*
+Assets/Oculus/*
