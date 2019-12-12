@@ -54,6 +54,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -167,6 +168,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -213,8 +215,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6223868130374480975}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 1, g: 0.62498116, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 3
@@ -250,7 +253,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -312,8 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speed: 1300
   m_Tip: {fileID: 8386148805111352677}
-  sparkEffect: {fileID: 997501125151612984, guid: 694ab9f73a91c49659275da5971ff174,
-    type: 3}
+  sparkEffect: {fileID: 0}
 --- !u!54 &3544760493190169588
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -342,6 +344,14 @@ PrefabInstance:
       value: FireSmall
       objectReference: {fileID: 0}
     - target: {fileID: 105996, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 156090, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 173482, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
@@ -401,6 +411,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235270, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 472fdd291afb440478c5fe7e3d1e7215, type: 3}
+    - target: {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: volMin
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: volMax
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 19823612, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -440,26 +478,6 @@ PrefabInstance:
     - target: {fileID: 19823612, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: VelocityModule.speedModifier.scalar
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 156090, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 173482, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
-      propertyPath: m_Layer
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 19861084, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
