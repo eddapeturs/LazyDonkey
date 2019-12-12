@@ -9,6 +9,7 @@ TagManager:
   - Fire
   - FireArrow
   - Firepit
+  - SheepArea
   layers:
   - Default
   - TransparentFX
