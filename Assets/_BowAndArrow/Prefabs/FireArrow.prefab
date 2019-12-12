@@ -315,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speed: 1300
   m_Tip: {fileID: 8386148805111352677}
+  sparkEffect: {fileID: 0}
 --- !u!54 &3544760493190169588
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -421,6 +422,22 @@ PrefabInstance:
     - target: {fileID: 455324, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235270, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 472fdd291afb440478c5fe7e3d1e7215, type: 3}
+    - target: {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: volMin
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: volMax
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 19823612, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
