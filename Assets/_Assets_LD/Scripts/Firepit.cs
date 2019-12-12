@@ -50,11 +50,14 @@ public class Firepit : MonoBehaviour
             GetRandomTimer();
             FullFire.SetActive(true);
             Smoke.SetActive(false);
+        } else
+        {
+            Smoke.SetActive(true);
+            HalfFire.SetActive(false);
+            FullFire.SetActive(false);
         }
 
-        Smoke.SetActive(false);
-        HalfFire.SetActive(false);
-        FullFire.SetActive(true);
+
         //light.intensity = 10; // Initial lighsource intensity of 10
     }
 
@@ -77,7 +80,8 @@ public class Firepit : MonoBehaviour
             FullFire.SetActive(false);
             HalfFire.SetActive(true);
             LowFire = true;
-            light.range /= 2;
+            light.range = 4;
+            //light.intensity = 4;
             //light.intensity = 5; // Initial lighsource intensity of 10
             //return;
         }
