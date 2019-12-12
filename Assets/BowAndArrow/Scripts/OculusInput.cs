@@ -20,25 +20,27 @@ public class OculusInput : MonoBehaviour
 
   private void Awake()
   {
-   // player = GameObject.FindGameObjectWithTag("Player");
+    // player = GameObject.FindGameObjectWithTag("Player");
     m_Bow = this.gameObject.GetComponent<Bow>();   // Get bow script
     m_OppositeController = gameObject.GetComponent<grabBow>().OppositeHand;
   }
 
-  private void Start(){
-    if (m_OppositeController.CompareTag(("RightHand"))) {m_Controller = OVRInput.Controller.RTouch; trigger = OVRInput.Button.PrimaryIndexTrigger;} 
-    if (m_OppositeController.CompareTag(("LeftHand"))) {m_Controller = OVRInput.Controller.LTouch; trigger = OVRInput.Button.SecondaryIndexTrigger;} 
+  private void Start()
+  {
+
+    if (m_OppositeController.CompareTag(("RightHand"))) { m_Controller = OVRInput.Controller.RTouch; trigger = OVRInput.Button.PrimaryIndexTrigger; }
+    if (m_OppositeController.CompareTag(("LeftHand"))) { m_Controller = OVRInput.Controller.LTouch; trigger = OVRInput.Button.SecondaryIndexTrigger; }
   }
 
   private void Update()
   {
- 
+
     if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, m_Controller))
       m_Bow.Pull(m_OppositeController.transform);
 
     if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, m_Controller))
       m_Bow.Release();
   }
-  
+
 
 }

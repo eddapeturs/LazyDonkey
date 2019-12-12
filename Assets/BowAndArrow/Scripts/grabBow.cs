@@ -4,67 +4,75 @@ using UnityEngine;
 
 public class grabBow : MonoBehaviour
 {
-    public GameObject m_bow; // Prefab
+  public GameObject m_bow; // Prefab
 
-    private GameObject currBow;
-    //private GameObject oldBow;
+  private GameObject currBow;
+  //private GameObject oldBow;
 
-    private bool leftCollision;
-    private bool rightCollision;
+  private bool leftCollision;
+  private bool rightCollision;
 
-    public GameObject LeftHand;
-    public GameObject RightHand;
+  private GameObject LeftHand;
+  private GameObject RightHand;
 
-    public GameObject OppositeHand;
-    
-    // Start is called before the first frame update
-    void Start()
+  public GameObject OppositeHand;
+
+  // Start is called before the first frame update
+  void Start()
+  {
+    LeftHand = GameObject.FindGameObjectWithTag("LeftHand");
+    RightHand = GameObject.FindGameObjectWithTag("RightHand");
+  }
+
+  // Update is called once per frame
+  void Update()
+  {
+    if (leftCollision && OVRInput.GetDown(OVRInput.RawButton.Y))
     {
-        LeftHand = GameObject.FindGameObjectWithTag("LeftHand");
-        RightHand = GameObject.FindGameObjectWithTag("RightHand");
+      spawnBow(LeftHand, RightHand);
+    }
+    else if (rightCollision && OVRInput.GetDown(OVRInput.RawButton.B))
+    {
+      spawnBow(RightHand, LeftHand);
+    }
+  }
+
+  void OnTriggerEnter(Collider col)
+  {
+    if (col.gameObject.tag == "RightHand")
+    {
+      rightCollision = true;
+      //oldBow = gameObject;
+    }
+    if (col.gameObject.tag == "LeftHand")
+    {
+      leftCollision = true;
+      // oldBow = gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+  }
+
+  void OnTriggerExit(Collider col)
+  {
+    if (col.gameObject.tag == "RightHand")
     {
-        if(leftCollision && OVRInput.GetDown(OVRInput.RawButton.Y)){
-            spawnBow(LeftHand, RightHand);
-        } else if(rightCollision && OVRInput.GetDown(OVRInput.RawButton.B)){
-            spawnBow(RightHand, LeftHand);
-        }
+      rightCollision = false;
     }
-
-    void OnTriggerEnter(Collider col)
+    else if (col.gameObject.tag == "LeftHand")
     {
-        if(col.gameObject.tag == "RightHand"){
-            rightCollision = true;
-            //oldBow = gameObject;
-        }
-        if(col.gameObject.tag == "LeftHand"){
-            leftCollision = true;
-           // oldBow = gameObject;
-        }
-
+      leftCollision = false;
     }
+  }
 
-    void OnTriggerExit(Collider col)
-    {
-        if(col.gameObject.tag == "RightHand"){
-            rightCollision = false;
-        } else if(col.gameObject.tag == "LeftHand"){
-            leftCollision = false;
-        }
-    }
+  void spawnBow(GameObject hand, GameObject otherHand)
+  {
+    OppositeHand = otherHand;
+    currBow = Instantiate(m_bow, hand.transform.position, hand.transform.rotation);
+    currBow.transform.parent = hand.transform;
+    hand.gameObject.transform.GetComponent<SphereCollider>().enabled = false;
+    otherHand.gameObject.transform.GetComponent<SphereCollider>().enabled = true;
 
-    void spawnBow(GameObject hand, GameObject otherHand)
-    {
-        OppositeHand = otherHand;
-        currBow = Instantiate(m_bow, hand.transform.position, hand.transform.rotation);
-        currBow.transform.parent = hand.transform;
-        hand.gameObject.transform.GetComponent<SphereCollider>().enabled = false;
-        otherHand.gameObject.transform.GetComponent<SphereCollider>().enabled = true;
-
-        // Delete old bow
-        Destroy(gameObject);        
-    }
+    // Delete old bow
+    Destroy(gameObject);
+  }
 }
