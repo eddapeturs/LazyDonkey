@@ -315,7 +315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speed: 1300
   m_Tip: {fileID: 8386148805111352677}
-  sparkEffect: {fileID: 0}
+  sparkEffect: {fileID: 997501125151612984, guid: 694ab9f73a91c49659275da5971ff174,
+    type: 3}
 --- !u!54 &3544760493190169588
 Rigidbody:
   m_ObjectHideFlags: 0
