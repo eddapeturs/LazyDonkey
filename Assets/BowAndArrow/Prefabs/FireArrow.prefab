@@ -567,7 +567,8 @@ PrefabInstance:
       propertyPath: VelocityModule.speedModifier.scalar
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
 --- !u!4 &4415038992930834553 stripped
 Transform:
