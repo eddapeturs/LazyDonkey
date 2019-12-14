@@ -257,10 +257,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   running: {fileID: 8300000, guid: 8a6603d870e0a432887ce2a4e43baf15, type: 3}
-  howl: {fileID: 0}
-  snare: {fileID: 0}
+  howl:
+  - {fileID: 8300000, guid: 7aefd010718cd4774b1aea1dd1f1483e, type: 3}
+  snare:
+  - {fileID: 8300000, guid: 76c33e7c446164609ba25b50fb62532c, type: 3}
+  - {fileID: 8300000, guid: ad458df5d461e463c8aee733cc395a7c, type: 3}
+  growl:
+  - {fileID: 8300000, guid: 9d432ddf4b75d4c379b7c24939bfa389, type: 3}
+  - {fileID: 8300000, guid: fefc85962ae6241a5918fb98f57b0f9c, type: 3}
+  - {fileID: 8300000, guid: 8525e7fdb63f24f38b465becf21d3994, type: 3}
   agent: {fileID: 3578078568118732863}
   audioSource: {fileID: 7886338707855892480}
+  AudioEmitFreq: 4
 --- !u!1 &4773551782029852354
 GameObject:
   m_ObjectHideFlags: 0

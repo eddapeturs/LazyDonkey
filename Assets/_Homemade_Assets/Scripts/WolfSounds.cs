@@ -8,11 +8,17 @@ public class WolfSounds : MonoBehaviour
 {
   private SoundEmitter emitter;
   public AudioClip running;
-  public AudioClip howl;
-  public AudioClip snare;
+  public AudioClip[] howl;
+  public AudioClip[] snare;
+
+  public AudioClip[] growl;
   public NavMeshAgent agent;
   public AudioSource audioSource;
 
+  public float AudioEmitFreq;
+
+
+  private float _timer = 0f;
 
 
   // Start is called before the first frame update
@@ -36,7 +42,30 @@ public class WolfSounds : MonoBehaviour
     {
       audioSource.Stop();
     }
+
+    _timer += Time.deltaTime;
+    if (_timer >= AudioEmitFreq)
+    {
+      AudioClip sound = findSound();
+      if (sound) audioSource.PlayOneShot(sound);
+      _timer = 0;
+    }
   }
 
+  AudioClip findSound()
+  {
+    int soundtype = Random.Range(0, 2);
+
+    switch (soundtype)
+    {
+      case 0:
+        return howl[Random.Range(0, howl.Length)];
+      case 1:
+        return snare[Random.Range(0, snare.Length)];
+      case 2:
+        return growl[Random.Range(0, growl.Length)];
+    }
+    return null;
+  }
 
 }
