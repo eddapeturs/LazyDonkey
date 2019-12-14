@@ -16,17 +16,10 @@ public class GameManager : MonoBehaviour
   public GameObject LoadingScreen;
   public GameObject loadingScreenTextObject;
 
-  //private Light light;
   private float timeToDark = 3f;
-
-  // public Light lightToFade;
-  // public float eachFadeTime = 2f;
   public float fadeWaitTime = 5f;
-
-  // Fade in fade out animation
-  //public Animator animator;
-
   private bool switchingLevel = false;
+  public int wolfKill = 0;    // Used for wolf sign text
 
   void Awake()
   {
@@ -84,6 +77,13 @@ public class GameManager : MonoBehaviour
     return levelName;
   }
 
+  public void updateWolfKill(){
+    wolfKill++;
+    Debug.Log("WolfKill: " + wolfKill);
+  }
 
+  public int getWolfKills(){
+    return wolfKill;
+  }
 
 }
