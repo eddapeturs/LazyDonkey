@@ -7111,7 +7111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1668ec9c9b39f364a953f8ce430037eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WolfPrefab: {fileID: 3578078568118732861, guid: 42d2abb8784b74d8b85c90585dd8e108,
+  m_WolfPrefab: {fileID: 3578078568118732861, guid: ed0a218abade2414d9d519276bcf34b7,
     type: 3}
   loRanTime: 5
   hiRanTime: 10
