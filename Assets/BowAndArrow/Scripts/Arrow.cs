@@ -2,7 +2,7 @@
 
 public class Arrow : MonoBehaviour
 {
-    public float m_Speed = 2000.0f;             // Arrow speed
+    public float m_Speed = 5000.0f;             // Arrow speed
     public Transform m_Tip = null;              // Reference to arrow tip
     //public Transform m_Tip = null;              // Reference to arrow tip
 
