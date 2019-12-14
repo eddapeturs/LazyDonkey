@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
+
+/*
+  Gamemanager is not refreshed between scenes
+*/
 public class GameManager : MonoBehaviour
 {
   public static GameManager instance;
@@ -19,7 +23,13 @@ public class GameManager : MonoBehaviour
   private float timeToDark = 3f;
   public float fadeWaitTime = 5f;
   private bool switchingLevel = false;
-  public int wolfKill = 0;    // Used for wolf sign text
+
+  // Sign variables 
+  private int sheepHealth = 100;
+  private int wolfKill = 0;    // Used for wolf sign text
+
+  private float gameplayTimer = 120f; // Playtime for survival
+
 
   void Awake()
   {
@@ -45,6 +55,7 @@ public class GameManager : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    // Switching from main menu to first level
     if(switchingLevel){
       fadeWaitTime -= Time.deltaTime;
       loadingScreenTextObject.GetComponent<TextMeshPro>().text =  Mathf.Ceil(fadeWaitTime).ToString();
@@ -77,13 +88,24 @@ public class GameManager : MonoBehaviour
     return levelName;
   }
 
+  public void updateSheepHealth(){
+    sheepHealth--;
+  }
+
+  public int getSheepHealth(){
+    return sheepHealth;
+  }
+
   public void updateWolfKill(){
     wolfKill++;
-    Debug.Log("WolfKill: " + wolfKill);
   }
 
   public int getWolfKills(){
     return wolfKill;
+  }
+
+  public float getGameplayTimer(){
+    return gameplayTimer;
   }
 
 }

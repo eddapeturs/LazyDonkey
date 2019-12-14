@@ -20,7 +20,7 @@ public class wolfKillUpdater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textBox.text = "" + manager.wolfKill;
+        textBox.text = "" + manager.getWolfKills();
     }
 
 
