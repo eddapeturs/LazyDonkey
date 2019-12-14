@@ -7909,6 +7909,7 @@ GameObject:
   - component: {fileID: 358949099}
   - component: {fileID: 358949098}
   - component: {fileID: 358949097}
+  - component: {fileID: 358949101}
   m_Layer: 0
   m_Name: SheepHealth
   m_TagString: Untagged
@@ -8100,6 +8101,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &358949101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358949095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26658f371dc2a743be5a0d2693a8d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 358949097}
 --- !u!1001 &360075928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9709,6 +9723,7 @@ GameObject:
   - component: {fileID: 448209993}
   - component: {fileID: 448209992}
   - component: {fileID: 448209991}
+  - component: {fileID: 448209995}
   m_Layer: 0
   m_Name: Countdown
   m_TagString: Untagged
@@ -9900,6 +9915,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &448209995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448209989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599cee50b8afb1e46ba420edf585d677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 448209991}
 --- !u!4 &449689829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6c31e44d6e6d6d942a0538263718d073,
@@ -15819,7 +15847,6 @@ MonoBehaviour:
   LoadingScreen: {fileID: 0}
   loadingScreenTextObject: {fileID: 0}
   fadeWaitTime: 5
-  wolfKill: 0
 --- !u!4 &694920963
 Transform:
   m_ObjectHideFlags: 0
