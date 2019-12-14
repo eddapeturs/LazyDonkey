@@ -14,6 +14,8 @@ public class Firepit : MonoBehaviour
     private GameObject HalfFire;
     private GameObject Smoke;
 
+    private GameManager manager;
+
     public AudioClip fireLitSound;
     public float timer;
     public float initialTimer;
@@ -21,6 +23,11 @@ public class Firepit : MonoBehaviour
     private NavMeshObstacle nmo;
     private Light light;
     private float lightRange;
+
+    private float timerRangeMin;
+    private float timerRangeMax;
+
+    private string levelName;
 
 
     // Called before start
@@ -32,6 +39,12 @@ public class Firepit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Get game manager
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        levelName = manager.getLevelName();
+        setDiffuculty(levelName);
+
+        // Finding fire children
         FullFire = transform.Find("Fire").gameObject;
         HalfFire = transform.Find("SmallerFire").gameObject;
         Smoke = transform.Find("Smoke").gameObject;
@@ -88,9 +101,23 @@ public class Firepit : MonoBehaviour
         //if (FireOn) setActiveFire();
     }
 
+    void setDiffuculty(string difficulty){
+        Debug.Log("Setting difficulty for: " + difficulty);
+        if(difficulty == "Hard"){
+            timerRangeMin = 6f;
+            timerRangeMax = 30f;
+        } else if (difficulty == "Medium"){
+            timerRangeMin = 12f;
+            timerRangeMax = 80f;
+        } else {                    // Easy & default
+            timerRangeMin = 20f;
+            timerRangeMax = 100f;
+        }
+    }
+
     void GetRandomTimer()
     {
-        timer = Random.Range(10f, 100f);
+        timer = Random.Range(timerRangeMin, timerRangeMax);
         initialTimer = timer;
     }
 

@@ -142,7 +142,7 @@ PrefabInstance:
         type: 3}
       propertyPath: releaseSound
       value: 
-      objectReference: {fileID: 8300000, guid: 92f47d90b2ef54255a19cbb59bee2ecc, type: 3}
+      objectReference: {fileID: 8300000, guid: bc54c35095eaf448a94cb2dd23ebdf9c, type: 3}
     - target: {fileID: 705318187586076703, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
         type: 3}
       propertyPath: m_Enabled
@@ -158,6 +158,11 @@ PrefabInstance:
       propertyPath: m_GrabThreshold
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 705318187586076703, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
+        type: 3}
+      propertyPath: arrowFlySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a533e64523f842d1b0bec87838f2eea, type: 3}
     - target: {fileID: 790529773014082474, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
         type: 3}
       propertyPath: m_Layer
@@ -176,7 +181,7 @@ PrefabInstance:
     - target: {fileID: 2589571369817754473, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
         type: 3}
       propertyPath: m_Name
-      value: Bow
+      value: Bow Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2589571369817754473, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
         type: 3}

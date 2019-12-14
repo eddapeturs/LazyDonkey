@@ -12878,7 +12878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9246308f9354effa0432419f9aa6c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goofy: Alex
   LoadingScreen: {fileID: 351275625}
   loadingScreenTextObject: {fileID: 706899525}
   fadeWaitTime: 5
@@ -25861,7 +25860,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.55869526, g: 0.57620424, b: 0.8773585, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -34839,7 +34838,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a2c47a9e1b5464a9b8a98edb3303cef3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5bb90b0e1b548497badfacb1d55f5cce, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.039
   m_Pitch: 1

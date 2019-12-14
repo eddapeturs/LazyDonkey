@@ -12,7 +12,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
   public static GameManager instance;
-  public string goofy = "Alex";
+  // public string goofy = "Alex";
   //public bool IsStarted = true; // Is set when all bonfires get lid. // Think about having event trigger.
 
   private string levelName;
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
   private int sheepHealth = 100;
   private int wolfKill = 0;    // Used for wolf sign text
 
-  private float gameplayTimer = 120f; // Playtime for survival
+  private float gameplayTimer = 300f; // Playtime for survival, 5 mins
 
 
   void Awake()
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
     Debug.Log("Hello from gameManager: " + level);
     //animator.SetTrigger("FadeOut");
     levelName = level;
-    goofy = level;
+    // goofy = level;
     // StartCoroutine(fadeInAndOutRepeat(lightToFade, eachFadeTime, fadeWaitTime));
     FadeToLevel(1);
     switchingLevel = true;

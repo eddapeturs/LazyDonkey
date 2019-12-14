@@ -421,7 +421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30926518}
   - component: {fileID: 30926519}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,7 +998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 50205118}
   - component: {fileID: 50205119}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4489,7 +4489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197355185}
   - component: {fileID: 197355186}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4713,7 +4713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 209856771}
   - component: {fileID: 209856772}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4926,7 +4926,7 @@ GameObject:
   - component: {fileID: 212508635}
   - component: {fileID: 212508636}
   - component: {fileID: 212508637}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5068,7 +5068,7 @@ GameObject:
   - component: {fileID: 222746208}
   - component: {fileID: 222746209}
   - component: {fileID: 222746210}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5278,7 +5278,7 @@ GameObject:
   - component: {fileID: 236714132}
   - component: {fileID: 236714133}
   - component: {fileID: 236714134}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5726,7 +5726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 256110345}
   - component: {fileID: 256110346}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6022,7 +6022,7 @@ GameObject:
   - component: {fileID: 288560716}
   - component: {fileID: 288560717}
   - component: {fileID: 288560718}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7535,7 +7535,7 @@ GameObject:
   - component: {fileID: 350382539}
   - component: {fileID: 350382540}
   - component: {fileID: 350382541}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9654,7 +9654,7 @@ GameObject:
   - component: {fileID: 445102181}
   - component: {fileID: 445102182}
   - component: {fileID: 445102183}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10802,7 +10802,7 @@ GameObject:
   - component: {fileID: 497822972}
   - component: {fileID: 497822973}
   - component: {fileID: 497822974}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10931,7 +10931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 502622988}
   - component: {fileID: 502622989}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12183,7 +12183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 551500469}
   - component: {fileID: 551500470}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15843,7 +15843,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9246308f9354effa0432419f9aa6c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goofy: Alex
   LoadingScreen: {fileID: 0}
   loadingScreenTextObject: {fileID: 0}
   fadeWaitTime: 5
@@ -16083,7 +16082,7 @@ GameObject:
   - component: {fileID: 701757645}
   - component: {fileID: 701757646}
   - component: {fileID: 701757647}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18201,7 +18200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 771690460}
   - component: {fileID: 771690461}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19181,7 +19180,7 @@ GameObject:
   - component: {fileID: 812602805}
   - component: {fileID: 812602806}
   - component: {fileID: 812602807}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19561,7 +19560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 832741026}
   - component: {fileID: 832741027}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20881,7 +20880,7 @@ GameObject:
   - component: {fileID: 891511078}
   - component: {fileID: 891511079}
   - component: {fileID: 891511080}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21034,7 +21033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 901977756}
   - component: {fileID: 901977757}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22438,7 +22437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 959548655}
   - component: {fileID: 959548656}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22962,7 +22961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 990399941}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23340,7 +23339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 997776188}
   - component: {fileID: 997776189}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23762,7 +23761,7 @@ GameObject:
   - component: {fileID: 1025587155}
   - component: {fileID: 1025587156}
   - component: {fileID: 1025587157}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26054,7 +26053,7 @@ GameObject:
   - component: {fileID: 1123565078}
   - component: {fileID: 1123565079}
   - component: {fileID: 1123565080}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26321,7 +26320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147681437}
   - component: {fileID: 1147681438}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28120,7 +28119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1253576056}
   - component: {fileID: 1253576057}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28306,7 +28305,7 @@ GameObject:
   - component: {fileID: 1263476009}
   - component: {fileID: 1263476010}
   - component: {fileID: 1263476011}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28576,7 +28575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281532557}
   - component: {fileID: 1281532558}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30314,7 +30313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374963149}
   - component: {fileID: 1374963150}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31657,7 +31656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445269071}
   - component: {fileID: 1445269072}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31768,7 +31767,7 @@ GameObject:
   - component: {fileID: 1450706500}
   - component: {fileID: 1450706501}
   - component: {fileID: 1450706502}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33273,7 +33272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1523684917}
   - component: {fileID: 1523684918}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33767,7 +33766,7 @@ GameObject:
   - component: {fileID: 1542370715}
   - component: {fileID: 1542370716}
   - component: {fileID: 1542370717}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34701,7 +34700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1591112450}
   - component: {fileID: 1591112451}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35471,7 +35470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1625160847}
   - component: {fileID: 1625160848}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35908,7 +35907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641784538}
   - component: {fileID: 1641784539}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39825,7 +39824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836648945}
   - component: {fileID: 1836648946}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41244,7 +41243,7 @@ GameObject:
   - component: {fileID: 1916715857}
   - component: {fileID: 1916715858}
   - component: {fileID: 1916715859}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: box (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42385,7 +42384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007714768}
   - component: {fileID: 2007714769}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMeshCollider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
