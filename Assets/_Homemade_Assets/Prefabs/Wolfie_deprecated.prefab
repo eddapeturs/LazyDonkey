@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7886338707855892480}
   - component: {fileID: 7463393673356169332}
   m_Layer: 0
-  m_Name: Wolfie
+  m_Name: Wolfie_deprecated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,12 +164,12 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 138
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 120
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

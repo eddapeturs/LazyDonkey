@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4868128754288664749}
   - component: {fileID: -8998189418438774391}
   m_Layer: 0
-  m_Name: Wolfie_w_animation
+  m_Name: Wolfie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,9 +106,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9d432ddf4b75d4c379b7c24939bfa389, type: 3}
   - {fileID: 8300000, guid: fefc85962ae6241a5918fb98f57b0f9c, type: 3}
   - {fileID: 8300000, guid: 8525e7fdb63f24f38b465becf21d3994, type: 3}
-  agent: {fileID: 3578078568118732863, guid: 42d2abb8784b74d8b85c90585dd8e108, type: 3}
-  audioSource: {fileID: 7886338707855892480, guid: 42d2abb8784b74d8b85c90585dd8e108,
-    type: 3}
+  agent: {fileID: 3578078568118732863}
+  audioSource: {fileID: 4868128754288664749}
   AudioEmitFreq: 12
 --- !u!82 &4868128754288664749
 AudioSource:
@@ -122,14 +121,14 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6860597569303290926, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
-  Priority: 138
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -182,7 +181,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.55277777
+      value: 0.44166666
       inSlope: 0
       outSlope: 0
       tangentMode: 0

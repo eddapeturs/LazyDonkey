@@ -430,7 +430,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 472fdd291afb440478c5fe7e3d1e7215, type: 3}
     - target: {fileID: 8235270, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_Volume
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8235270, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: m_Enabled
@@ -444,6 +444,14 @@ PrefabInstance:
     - target: {fileID: 8235270, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
       value: 0.32777777
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235270, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: Spatialize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235270, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
+      propertyPath: MaxDistance
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: looping
