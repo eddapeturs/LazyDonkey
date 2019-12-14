@@ -10,10 +10,10 @@ public class Bow : MonoBehaviour
   public GameObject m_FireArrowPrefab = null;
 
   [Header("Sounds")]
-  public AudioClip releaseSound;
+  public AudioClip arrowFlySound;
 
   [Header("Bow")]
-  public float m_GrabThreshold = 0.15f;
+  public float m_GrabThreshold = 0.3f;
   public Transform m_Start = null;
   public Transform m_End = null;
   public Transform m_Socket = null;
@@ -140,7 +140,7 @@ public class Bow : MonoBehaviour
     if (m_PullValue > 0.3f)
     {
       FireArrow();
-      AudioSource.PlayClipAtPoint(releaseSound, transform.position);
+      AudioSource.PlayClipAtPoint(arrowFlySound, transform.position, 0.1f);
     }
 
     m_PullingHand = null;
