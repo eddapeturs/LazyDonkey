@@ -15,7 +15,7 @@ public class grabBow : MonoBehaviour
   public GameObject LeftHand;
   public GameObject RightHand;
 
-  public GameObject OppositeHand;
+  public GameObject OppositeHand = null;
 
   // Start is called before the first frame update
   void Start()
@@ -32,22 +32,16 @@ public class grabBow : MonoBehaviour
   {
     if (leftCollision && OVRInput.GetDown(OVRInput.RawButton.Y))
     {
-      Debug.Log("Left collision");
       spawnBow(LeftHand, RightHand);
     }
     else if (rightCollision && OVRInput.GetDown(OVRInput.RawButton.B))
     {
-      Debug.Log("Right collision");
       spawnBow(RightHand, LeftHand);
     }
   }
 
   void OnTriggerEnter(Collider col)
   {
-    
-    Debug.Log("Hello from tag: " + col.gameObject.tag);
-    Debug.Log("Hello from name: " + col.gameObject.name);
-    
     if (col.gameObject.tag == "RightHand")
     {
       rightCollision = true;

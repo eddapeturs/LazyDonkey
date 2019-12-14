@@ -14908,6 +14908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9246308f9354effa0432419f9aa6c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goofy: Alex
   IsStarted: 0
 --- !u!4 &694920963
 Transform:
@@ -15363,6 +15364,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4eb287cdfa32264d80f58ee2ec0a757, type: 3}
+--- !u!1 &712795738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 263589143731262334, guid: f4eb287cdfa32264d80f58ee2ec0a757,
+    type: 3}
+  m_PrefabInstance: {fileID: 712795737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &712795739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712795738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c61356de80a12c47bc580b254fe537b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 694920962}
 --- !u!1001 &715786542
 PrefabInstance:
   m_ObjectHideFlags: 0

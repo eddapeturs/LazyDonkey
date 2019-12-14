@@ -7,9 +7,13 @@ public class NewSceneWolfSpawn : MonoBehaviour
     [Header("Assets")]
     public GameObject m_WolfPrefab = null;
 
+    private GameObject manager;
     Vector3 center;
+    // Default values
     public float loRanTime = 5f;
     public float hiRanTime = 50f;
+
+    private string levelName;
 
     private Vector3[] spawnPoints = new Vector3[4]
     {
@@ -28,13 +32,15 @@ public class NewSceneWolfSpawn : MonoBehaviour
     {
         GetRandomTimer();
         center = transform.position;
+        manager = GameObject.Find("GameManager");
+        levelName = manager.GetComponent<GameManager>().getLevelName();
+        setLevelDifficulty(levelName);
     }
 
     // Update is called once per frame
     void Update()
     {
         _timer -= Time.deltaTime;
-
         if (_timer < 0)
         {
             CreateWolf();
@@ -57,5 +63,22 @@ public class NewSceneWolfSpawn : MonoBehaviour
     void GetRandomTimer()
     {
         _timer = Random.Range(loRanTime, hiRanTime);
+    }
+
+
+    void setLevelDifficulty(string difficulty){
+        Debug.Log("Setting difficulty for: " + difficulty);
+        if(difficulty == "Hard"){
+            loRanTime = 1f;
+            hiRanTime = 10f;
+        } else if (difficulty == "Medium"){
+            loRanTime = 5f;
+            hiRanTime = 30f;
+        } else {    // Easy & Default
+            loRanTime = 10f;
+            hiRanTime = 80f;
+        }
+        
+
     }
 }

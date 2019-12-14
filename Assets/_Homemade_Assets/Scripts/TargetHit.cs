@@ -36,14 +36,12 @@ public class TargetHit : MonoBehaviour
         if (col.gameObject.tag == "FireArrow")
         {
             Transform arrow = col.gameObject.transform;
-            Debug.Log("Hit!");
             AudioSource.PlayClipAtPoint(ArrowStoppingInObject, transform.position);
             AudioSource.PlayClipAtPoint(SuccessfullHit, transform.position);
             counterText.SetText("{0}", ++hitCounter);
 
             //if (effect)
             //{
-            Debug.Log("Effect");
             Instantiate(effect, arrow.position, arrow.rotation);
             //}
             

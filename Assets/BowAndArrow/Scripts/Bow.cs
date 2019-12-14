@@ -44,8 +44,6 @@ public class Bow : MonoBehaviour
   {
     StartCoroutine(CreateArrow(0.0f));
     m_countToNextFireArrow = Random.Range(1, maxInterval);
-    Debug.Log("Counter: " + m_countToNextFireArrow);
-
   }
 
   private void Update()

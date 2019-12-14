@@ -22,10 +22,8 @@ public class Cylinder : MonoBehaviour
 
 	void OnTriggerEnter(Collider col)
 	{
-        Debug.Log("Hello from cylinder");
         if(col.gameObject.tag == "FireArrow")
         {
-            Debug.Log("Fire! " + transform.parent.name);
             transform.parent.GetComponent<Firepit>().igniteFlame();   
 		}
 		
