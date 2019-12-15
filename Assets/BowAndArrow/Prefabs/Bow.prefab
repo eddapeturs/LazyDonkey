@@ -388,8 +388,9 @@ MonoBehaviour:
     type: 3}
   m_FireArrowPrefab: {fileID: 8542102953145869890, guid: ec848ffad68cb446ba9b246c5f10a608,
     type: 3}
-  releaseSound: {fileID: 8300000, guid: 92f47d90b2ef54255a19cbb59bee2ecc, type: 3}
-  m_GrabThreshold: 0.05
+  source: {fileID: 0}
+  arrowFlySound: {fileID: 0}
+  m_GrabThreshold: 0.1
   m_Start: {fileID: 320107371}
   m_End: {fileID: 463045334}
   m_Socket: {fileID: 1872672291559342736}
@@ -420,6 +421,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bow: {fileID: 2589571369817754473}
+  LeftHand: {fileID: 0}
+  RightHand: {fileID: 0}
   OppositeHand: {fileID: 0}
 --- !u!114 &-8260847344261734439
 MonoBehaviour:

@@ -96,6 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9608e403bfbe4be69f0d3251e97a22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MixerGroupRunning: {fileID: 5402625749732441775, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+    type: 2}
+  MixerGroupHowl: {fileID: 7612749094465933611, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+    type: 2}
   running:
   - {fileID: 8300000, guid: e4e113093c11c488e8e7dd325d0efcfc, type: 3}
   - {fileID: 8300000, guid: 14f90c3d1190b44dbb92c3a27040ed8d, type: 3}
@@ -113,7 +117,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8525e7fdb63f24f38b465becf21d3994, type: 3}
   agent: {fileID: 3578078568118732863}
   audioSource: {fileID: 4868128754288664749}
-  AudioEmitFreq: 12
+  AudioEmitFreq: 25
 --- !u!82 &4868128754288664749
 AudioSource:
   m_ObjectHideFlags: 0
@@ -397,7 +401,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1106240610062240602
+--- !u!114 &1347832142956342834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,6 +413,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8674046982c4e9994c98bfbb4381d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 4868128754288664749}
+  die:
+  - {fileID: 8300000, guid: 9355f267580664e2d91e47e0fecf9233, type: 3}
+  - {fileID: 8300000, guid: 85fc7c1e452fe4c1daec402f53dedbdb, type: 3}
+  - {fileID: 8300000, guid: 17ff40608e9904a549fdbe0e43e31623, type: 3}
+  - {fileID: 8300000, guid: f079e8cbd6f5e465397a59c5c1fee64a, type: 3}
+  - {fileID: 8300000, guid: 94b786e5a050046ed91b135d2a5dbe59, type: 3}
+  mixerGroup: {fileID: -402552622706280329, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+    type: 2}
 --- !u!1 &6837662155922724155
 GameObject:
   m_ObjectHideFlags: 0

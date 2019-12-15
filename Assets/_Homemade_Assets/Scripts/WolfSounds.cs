@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using OVR;
-
+using UnityEngine.Audio;
 public class WolfSounds : MonoBehaviour
 {
-  private SoundEmitter emitter;
+
+  public AudioMixerGroup MixerGroupRunning;
+  public AudioMixerGroup MixerGroupHowl;
   public AudioClip[] running;
   public AudioClip[] howl;
   public AudioClip[] snare;
@@ -17,6 +19,7 @@ public class WolfSounds : MonoBehaviour
 
   public float AudioEmitFreq;
 
+  private float freq;
 
   private float _timer = 0f;
 
@@ -24,7 +27,7 @@ public class WolfSounds : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-
+    freq = Random.Range(freq, freq * 2f);
   }
 
   // Update is called once per frame
@@ -34,6 +37,8 @@ public class WolfSounds : MonoBehaviour
     {
       if (!audioSource.isPlaying)
       {
+        audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+        audioSource.outputAudioMixerGroup = MixerGroupRunning;
         audioSource.clip = running[Random.Range(0, running.Length)];
         audioSource.Play();
       }
@@ -44,9 +49,11 @@ public class WolfSounds : MonoBehaviour
     }
 
     _timer += Time.deltaTime;
-    if (_timer >= AudioEmitFreq)
+    if (_timer >= freq)
     {
       //AudioClip sound = findSound();
+      audioSource.rolloffMode = AudioRolloffMode.Linear;
+      audioSource.outputAudioMixerGroup = MixerGroupHowl;
       AudioClip sound = howl[Random.Range(0, howl.Length)];
       if (sound) audioSource.PlayOneShot(sound);
       _timer = 0;

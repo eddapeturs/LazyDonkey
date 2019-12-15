@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8235270, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11408998, guid: 9471d2206e57ca246a4bf982f3c29c8f, type: 3}
       propertyPath: looping

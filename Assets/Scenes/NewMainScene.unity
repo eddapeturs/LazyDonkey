@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.5660378, g: 0.36044857, b: 0.36044857, a: 1}
+  m_FogColor: {r: 0.4528302, g: 0.22000714, b: 0.22000714, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.003
   m_LinearFogStart: 0
@@ -1780,6 +1780,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 2178385437169169086, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
 --- !u!1001 &75639381
 PrefabInstance:
@@ -1943,6 +1944,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 2178385437169169086, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
 --- !u!1001 &77786913
 PrefabInstance:
@@ -14122,6 +14124,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 2178385437169169086, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
 --- !u!1001 &628787713
 PrefabInstance:
@@ -15615,6 +15618,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 2178385437169169086, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
 --- !u!1 &687608975 stripped
 GameObject:
@@ -16250,7 +16254,7 @@ PrefabInstance:
     - target: {fileID: 263589143731262335, guid: f4eb287cdfa32264d80f58ee2ec0a757,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.85
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 263589143731262335, guid: f4eb287cdfa32264d80f58ee2ec0a757,
         type: 3}
@@ -20137,6 +20141,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 2178385437169169086, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
 --- !u!1001 &866452078
 PrefabInstance:
@@ -20644,9 +20649,7 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -5.24
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 2178385437169169086, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
 --- !u!1001 &888569738
 PrefabInstance:
@@ -29306,7 +29309,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.0757387, g: 0.10900547, b: 0.4339623, a: 1}
+  m_Color: {r: 0.493948, g: 0.5359526, b: 0.9433962, a: 1}
   m_Intensity: 0.4
   m_Range: 76.94
   m_SpotAngle: 30
@@ -31574,6 +31577,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 2178385437169169086, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d736d707a287e486ab9cfc2d9c234abe, type: 3}
 --- !u!1 &1445269070
 GameObject:
