@@ -46,7 +46,8 @@ public class WolfSounds : MonoBehaviour
     _timer += Time.deltaTime;
     if (_timer >= AudioEmitFreq)
     {
-      AudioClip sound = findSound();
+      //AudioClip sound = findSound();
+      AudioClip sound = howl[Random.Range(0, howl.Length)];
       if (sound) audioSource.PlayOneShot(sound);
       _timer = 0;
     }
