@@ -8,6 +8,8 @@ public class Firepit : MonoBehaviour
     public static Firepit instance;
     public bool LowFire = false;
     public bool FireOn;
+
+    public bool offSound;
     //public Light Light;
 
     private GameObject FullFire;
@@ -17,6 +19,7 @@ public class Firepit : MonoBehaviour
     private GameManager manager;
 
     public AudioClip fireLitSound;
+    public AudioClip fireOffSound;
     public float timer;
     public float initialTimer;
 
@@ -28,6 +31,7 @@ public class Firepit : MonoBehaviour
     private float timerRangeMax;
 
     private string levelName;
+    public AudioSource audioSource;
 
 
     // Called before start
@@ -40,6 +44,7 @@ public class Firepit : MonoBehaviour
     void Start()
     {
         // Get game manager
+        offSound = false;
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         levelName = manager.getLevelName();
         setDiffuculty(levelName);
@@ -85,8 +90,15 @@ public class Firepit : MonoBehaviour
             Smoke.SetActive(true);
             nmo.enabled = false;
             FireOn = false;
+            //offSound = true;
             //light.intensity = 0; // Initial lighsource intensity of 10
             light.enabled = false;
+            if (timer > -0.2f && timer < -0.1f)
+            {
+                audioSource.clip = fireOffSound;
+                audioSource.Play();
+            }
+            //AudioSource.Destroy(fireOffSound);
         }
         else if (timer < initialTimer / 2)
         {
