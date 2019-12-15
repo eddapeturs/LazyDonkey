@@ -10,7 +10,7 @@ public class wolfSpawn : MonoBehaviour
   Vector3 center;
   private float timer;
 
-  int counter = 0;
+ // int counter = 0;
 
 
   // Start is called before the first frame update

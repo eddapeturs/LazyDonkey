@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
   // public string goofy = "Alex";
   //public bool IsStarted = true; // Is set when all bonfires get lid. // Think about having event trigger.
 
-  private string levelName;
+  public string levelName;
 
   public GameObject LoadingScreen;
   public GameObject loadingScreenTextObject;
@@ -88,8 +88,12 @@ public class GameManager : MonoBehaviour
     return levelName;
   }
 
-  public void updateSheepHealth(){
-    sheepHealth--;
+  public void updateSheepHealth(int amount){
+    sheepHealth -= amount;
+    if (sheepHealth < 0){
+      sheepHealth = 0;
+      stopGame("Lose");
+    }
   }
 
   public int getSheepHealth(){
@@ -97,7 +101,7 @@ public class GameManager : MonoBehaviour
   }
 
   public void updateWolfKill(){
-    wolfKill++;
+    wolfKill++; 
   }
 
   public int getWolfKills(){
@@ -107,5 +111,10 @@ public class GameManager : MonoBehaviour
   public float getGameplayTimer(){
     return gameplayTimer;
   }
+
+  public void stopGame(string winOrLose){
+    // Stop the game!
+    Debug.Log("Stop game! " + winOrLose);
+  } 
 
 }

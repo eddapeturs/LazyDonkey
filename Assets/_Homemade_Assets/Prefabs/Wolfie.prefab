@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -8998189418438774391}
   m_Layer: 0
   m_Name: Wolfie
-  m_TagString: Untagged
+  m_TagString: Wolf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,6 +582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: wolf_lpoly (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 286cf582b5cd946459c3c9bf0e67a7f6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 286cf582b5cd946459c3c9bf0e67a7f6, type: 3}

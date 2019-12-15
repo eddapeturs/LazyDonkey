@@ -24,7 +24,7 @@ public class NewSceneWolfSpawn : MonoBehaviour
     };
     private float _timer;
 
-    int counter = 0;
+    //int counter = 0;
 
 
     // Start is called before the first frame update
