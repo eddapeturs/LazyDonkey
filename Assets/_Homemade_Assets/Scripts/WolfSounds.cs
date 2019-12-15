@@ -19,15 +19,21 @@ public class WolfSounds : MonoBehaviour
 
   public float AudioEmitFreq;
 
-  private float freq;
 
-  private float _timer = 0f;
+  private float _timer = 0;
 
 
   // Start is called before the first frame update
+
+  void Awake()
+  {
+    audioSource.playOnAwake = false;
+  }
   void Start()
   {
-    freq = Random.Range(freq, freq * 2f);
+    audioSource.rolloffMode = AudioRolloffMode.Linear;
+    audioSource.outputAudioMixerGroup = MixerGroupHowl;
+    audioSource.PlayOneShot(howl[Random.Range(0, howl.Length)]);
   }
 
   // Update is called once per frame
@@ -39,8 +45,7 @@ public class WolfSounds : MonoBehaviour
       {
         audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
         audioSource.outputAudioMixerGroup = MixerGroupRunning;
-        audioSource.clip = running[Random.Range(0, running.Length)];
-        audioSource.Play();
+        audioSource.PlayOneShot(running[Random.Range(0, running.Length)]);
       }
     }
     else if (audioSource.isPlaying && audioSource.clip == (running[0] || running[1]))
@@ -48,16 +53,19 @@ public class WolfSounds : MonoBehaviour
       audioSource.Stop();
     }
 
-    _timer += Time.deltaTime;
-    if (_timer >= freq)
+    AudioEmitFreq -= Time.deltaTime;
+    if (AudioEmitFreq < 0)
     {
-      //AudioClip sound = findSound();
-      audioSource.rolloffMode = AudioRolloffMode.Linear;
-      audioSource.outputAudioMixerGroup = MixerGroupHowl;
-      AudioClip sound = howl[Random.Range(0, howl.Length)];
-      if (sound) audioSource.PlayOneShot(sound);
-      _timer = 0;
+      playHowl();
+      AudioEmitFreq = Random.Range(25, 50);
     }
+  }
+
+  void playHowl()
+  {
+    audioSource.rolloffMode = AudioRolloffMode.Linear;
+    audioSource.outputAudioMixerGroup = MixerGroupHowl;
+    audioSource.PlayOneShot(howl[Random.Range(0, howl.Length)]);
   }
 
   AudioClip findSound()
