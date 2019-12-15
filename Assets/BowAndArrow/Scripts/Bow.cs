@@ -10,6 +10,7 @@ public class Bow : MonoBehaviour
   public GameObject m_FireArrowPrefab = null;
 
   [Header("Sounds")]
+  public AudioSource source;
   public AudioClip arrowFlySound;
 
   [Header("Bow")]
@@ -19,8 +20,8 @@ public class Bow : MonoBehaviour
   public Transform m_Socket = null;
 
 
- [Header("Hands")]
- private GameObject leftHand;
+  [Header("Hands")]
+  private GameObject leftHand;
   private GameObject rightHand;
 
 
@@ -35,6 +36,7 @@ public class Bow : MonoBehaviour
 
   private void Awake()
   {
+    source.clip = arrowFlySound;
     m_Animator = GetComponent<Animator>();
     leftHand = GameObject.FindGameObjectWithTag("LeftHand");
     rightHand = GameObject.FindGameObjectWithTag("RightHand");
@@ -140,7 +142,8 @@ public class Bow : MonoBehaviour
     if (m_PullValue > 0.3f)
     {
       FireArrow();
-      AudioSource.PlayClipAtPoint(arrowFlySound, transform.position, 0.1f);
+      source.Play();
+      // AudioSource.PlayClipAtPoint(arrowFlySound, transform.position, 0.1f);
     }
 
     m_PullingHand = null;

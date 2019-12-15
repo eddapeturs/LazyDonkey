@@ -5353,7 +5353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LowFire: 0
   FireOn: 0
-  fireLitSound: {fileID: 0}
+  fireLitSound: {fileID: 8300000, guid: b8f61c098b033425b9bea3000ebc6212, type: 3}
   timer: 0
   initialTimer: 0
 --- !u!54 &7626405829043522672

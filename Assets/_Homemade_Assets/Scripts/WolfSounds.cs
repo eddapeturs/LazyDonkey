@@ -7,7 +7,7 @@ using OVR;
 public class WolfSounds : MonoBehaviour
 {
   private SoundEmitter emitter;
-  public AudioClip running;
+  public AudioClip[] running;
   public AudioClip[] howl;
   public AudioClip[] snare;
 
@@ -34,11 +34,11 @@ public class WolfSounds : MonoBehaviour
     {
       if (!audioSource.isPlaying)
       {
-        audioSource.clip = running;
+        audioSource.clip = running[Random.Range(0, running.Length)];
         audioSource.Play();
       }
     }
-    else if (audioSource.isPlaying && audioSource.clip == running)
+    else if (audioSource.isPlaying && audioSource.clip == (running[0] || running[1]))
     {
       audioSource.Stop();
     }

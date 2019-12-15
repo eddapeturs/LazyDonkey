@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.254717, g: 0.12375402, b: 0.12375402, a: 1}
+  m_FogColor: {r: 0.5660378, g: 0.36044857, b: 0.36044857, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.003
   m_LinearFogStart: 0
@@ -1611,7 +1611,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fireLitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7648dd35183a645708678e7209c53317, type: 3}
+      objectReference: {fileID: 8300000, guid: b8f61c098b033425b9bea3000ebc6212, type: 3}
     - target: {fileID: 1003395355946840927, guid: d736d707a287e486ab9cfc2d9c234abe,
         type: 3}
       propertyPath: FireOn
@@ -1804,7 +1804,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fireLitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7648dd35183a645708678e7209c53317, type: 3}
+      objectReference: {fileID: 8300000, guid: b8f61c098b033425b9bea3000ebc6212, type: 3}
     - target: {fileID: 1003395355946840927, guid: d736d707a287e486ab9cfc2d9c234abe,
         type: 3}
       propertyPath: FireOn
@@ -13978,7 +13978,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fireLitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7648dd35183a645708678e7209c53317, type: 3}
+      objectReference: {fileID: 8300000, guid: b8f61c098b033425b9bea3000ebc6212, type: 3}
     - target: {fileID: 1003395355946840927, guid: d736d707a287e486ab9cfc2d9c234abe,
         type: 3}
       propertyPath: FireOn
@@ -15451,7 +15451,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fireLitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7648dd35183a645708678e7209c53317, type: 3}
+      objectReference: {fileID: 8300000, guid: b8f61c098b033425b9bea3000ebc6212, type: 3}
     - target: {fileID: 1003395355946840927, guid: d736d707a287e486ab9cfc2d9c234abe,
         type: 3}
       propertyPath: FireOn
@@ -16250,7 +16250,7 @@ PrefabInstance:
     - target: {fileID: 263589143731262335, guid: f4eb287cdfa32264d80f58ee2ec0a757,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.95
+      value: 9.85
       objectReference: {fileID: 0}
     - target: {fileID: 263589143731262335, guid: f4eb287cdfa32264d80f58ee2ec0a757,
         type: 3}
@@ -19993,7 +19993,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fireLitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7648dd35183a645708678e7209c53317, type: 3}
+      objectReference: {fileID: 8300000, guid: b8f61c098b033425b9bea3000ebc6212, type: 3}
     - target: {fileID: 1003395355946840927, guid: d736d707a287e486ab9cfc2d9c234abe,
         type: 3}
       propertyPath: FireOn
@@ -20508,7 +20508,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fireLitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7648dd35183a645708678e7209c53317, type: 3}
+      objectReference: {fileID: 8300000, guid: b8f61c098b033425b9bea3000ebc6212, type: 3}
     - target: {fileID: 1003395355946840927, guid: d736d707a287e486ab9cfc2d9c234abe,
         type: 3}
       propertyPath: FireOn
@@ -23590,6 +23590,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705648635442743727, guid: 4af6d639a7700234ebb045cd5bee5342,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8737054591597955003, guid: 4af6d639a7700234ebb045cd5bee5342,
         type: 3}
@@ -29301,7 +29306,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.16770674, g: 0.1445799, b: 0.5377358, a: 1}
+  m_Color: {r: 0.0757387, g: 0.10900547, b: 0.4339623, a: 1}
   m_Intensity: 0.4
   m_Range: 76.94
   m_SpotAngle: 30
@@ -31425,7 +31430,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fireLitSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7648dd35183a645708678e7209c53317, type: 3}
+      objectReference: {fileID: 8300000, guid: b8f61c098b033425b9bea3000ebc6212, type: 3}
     - target: {fileID: 1003395355946840927, guid: d736d707a287e486ab9cfc2d9c234abe,
         type: 3}
       propertyPath: FireOn

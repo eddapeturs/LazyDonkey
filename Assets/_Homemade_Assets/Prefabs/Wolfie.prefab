@@ -96,9 +96,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9608e403bfbe4be69f0d3251e97a22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  running: {fileID: 8300000, guid: 8a6603d870e0a432887ce2a4e43baf15, type: 3}
+  running:
+  - {fileID: 8300000, guid: e4e113093c11c488e8e7dd325d0efcfc, type: 3}
+  - {fileID: 8300000, guid: 14f90c3d1190b44dbb92c3a27040ed8d, type: 3}
   howl:
-  - {fileID: 8300000, guid: 7aefd010718cd4774b1aea1dd1f1483e, type: 3}
+  - {fileID: 8300000, guid: a7bf6a2960ffa4aeea8a10d5b0095173, type: 3}
+  - {fileID: 8300000, guid: 09a697c537a1e48d0a7051ef099d836e, type: 3}
+  - {fileID: 8300000, guid: bc7df99aeb91142eab4ffa46424898fc, type: 3}
+  - {fileID: 8300000, guid: a49d954181c4746a9b9e3a35e295e14d, type: 3}
   snare:
   - {fileID: 8300000, guid: 76c33e7c446164609ba25b50fb62532c, type: 3}
   - {fileID: 8300000, guid: ad458df5d461e463c8aee733cc395a7c, type: 3}
@@ -121,7 +126,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6860597569303290926, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -133,7 +138,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
