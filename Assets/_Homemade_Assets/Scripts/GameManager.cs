@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
   private int sheepHealth = 100;
   private int wolfKill = 0;    // Used for wolf sign text
 
-  private float gameplayTimer = 300f; // Playtime for survival, 5 mins
- // private float gameplayTimer = 10f; // Playtime for survival, 5 mins
+  private float gameplayTimer = 120f; // Playtime for survival, 5 mins
+                                      // private float gameplayTimer = 10f; // Playtime for survival, 5 mins
 
   private bool gameEnd = false;
 
@@ -71,16 +71,20 @@ public class GameManager : MonoBehaviour
       {
         loadScene("NewMainScene");
       }
-    } else if (gameEnd){
+    }
+    else if (gameEnd)
+    {
       fadeWaitTime -= Time.deltaTime;
-      if(fadeWaitTime < 0){
-        gameEnd = false;   
+      if (fadeWaitTime < 0)
+      {
+        gameEnd = false;
         loadScene("MainMenu");
       }
     }
   }
 
-  void loadScene(string scene){
+  void loadScene(string scene)
+  {
     switchingLevel = false;
     loadingScreenActive = false;
     loadingScreenText = "";
@@ -138,10 +142,11 @@ public class GameManager : MonoBehaviour
     gameEnd = true;
   }
 
-  void Reset(){
-      sheepHealth = 100;
-      wolfKill = 0;    // Used for wolf sign text 
-      gameplayTimer = 300f; // Playtime for survival, 5 mins
+  void Reset()
+  {
+    sheepHealth = 100;
+    wolfKill = 0;    // Used for wolf sign text 
+    gameplayTimer = 300f; // Playtime for survival, 5 mins
   }
 
 }

@@ -253,7 +253,7 @@ PrefabInstance:
     - target: {fileID: 705318187586076703, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
         type: 3}
       propertyPath: m_GrabThreshold
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 705318187586076703, guid: 6c3c0bfa92038bd4aa725e80a43ced1e,
         type: 3}
