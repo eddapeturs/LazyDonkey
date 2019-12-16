@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
   public GameObject LoadingScreen;
   public GameObject loadingScreenTextObject;
 
- // public GameObject mrPerson;
+  // public GameObject mrPerson;
 
   private float timeToDark = 3f;
   public float fadeWaitTime = 5f;
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     DontDestroyOnLoad(this.gameObject);
-   // DontDestroyOnLoad(mrPerson);
+    // DontDestroyOnLoad(mrPerson);
   }
 
   // Start is called before the first frame update
