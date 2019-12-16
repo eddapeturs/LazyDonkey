@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
   public GameObject LoadingScreen;
   public GameObject loadingScreenTextObject;
 
+  public GameObject mrPerson;
+
   private float timeToDark = 3f;
   public float fadeWaitTime = 5f;
   private bool switchingLevel = false;
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
     }
 
     DontDestroyOnLoad(this.gameObject);
+    DontDestroyOnLoad(mrPerson);
   }
 
   // Start is called before the first frame update
@@ -67,6 +70,7 @@ public class GameManager : MonoBehaviour
       {
         SceneManager.LoadScene("NewMainScene", LoadSceneMode.Single);
         switchingLevel = false;
+        LoadingScreen.SetActive(false);
         fadeWaitTime = 5f;
       }
     }
@@ -130,6 +134,9 @@ public class GameManager : MonoBehaviour
   {
     // Stop the game!
     Debug.Log("Stop game! " + winOrLose);
+    LoadingScreen.SetActive(true);
+    loadingScreenTextObject.GetComponent<TextMeshPro>().text = "You " + winOrLose + "!";
+
   }
 
 }
