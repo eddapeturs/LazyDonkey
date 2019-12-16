@@ -23,13 +23,15 @@ public class timerUpdater : MonoBehaviour
         if(gameplayTimer >= 0){
             gameplayTimer -= Time.deltaTime;
 
-            string minutes = Mathf.Floor(gameplayTimer / 60).ToString("00");
+            float tmpMin = Mathf.Floor(gameplayTimer / 60);
+            if(tmpMin < 0){ tmpMin = 0; }
+            string minutes = tmpMin.ToString("00");
             string seconds = (gameplayTimer % 60).ToString("00");
 
             textBox.text = string.Format("{0}:{1}", minutes, seconds);
         } else {
             gameplayTimer = 0;
-            manager.stopGame("Win");
+            manager.stopGame("win");
         }
     }
 }

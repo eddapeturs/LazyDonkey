@@ -17,21 +17,24 @@ public class GameManager : MonoBehaviour
 
   public string levelName;
 
-  public GameObject LoadingScreen;
-  public GameObject loadingScreenTextObject;
-
- // public GameObject mrPerson;
+  // public GameObject LoadingScreen;
+  public bool loadingScreenActive;
+  //public GameObject loadingScreenTextObject;
 
   private float timeToDark = 3f;
   public float fadeWaitTime = 5f;
   private bool switchingLevel = false;
+
+  public string loadingScreenText;
 
   // Sign variables 
   private int sheepHealth = 100;
   private int wolfKill = 0;    // Used for wolf sign text
 
   //private float gameplayTimer = 300f; // Playtime for survival, 5 mins
-  private float gameplayTimer = 30f; // Playtime for survival, 5 mins
+  private float gameplayTimer = 10f; // Playtime for survival, 5 mins
+
+  private bool gameEnd = false;
 
 
   void Awake()
@@ -47,16 +50,12 @@ public class GameManager : MonoBehaviour
     }
 
     DontDestroyOnLoad(this.gameObject);
-   // DontDestroyOnLoad(mrPerson);
   }
 
   // Start is called before the first frame update
   void Start()
   {
     instance = this;
-    // loadingScreenTextObject.GetComponent<TextMeshPro>().text = "Edda";
-    // lightToFade = GameObject.Find("Directional Light").GetComponent<Light>();
-
   }
 
   // Update is called once per frame
@@ -65,39 +64,36 @@ public class GameManager : MonoBehaviour
     // Switching from main menu to first level
     if (switchingLevel)
     {
-      Debug.Log("Switching level!");
       fadeWaitTime -= Time.deltaTime;
-      loadingScreenTextObject.GetComponent<TextMeshPro>().text = Mathf.Ceil(fadeWaitTime).ToString();
+      // loadingScreenTextObject.GetComponent<TextMeshPro>().text = Mathf.Ceil(fadeWaitTime).ToString();
+      loadingScreenText = Mathf.Ceil(fadeWaitTime).ToString();
       if (fadeWaitTime < 0)
       {
-        SceneManager.LoadScene("NewMainScene", LoadSceneMode.Single);
-        switchingLevel = false;
-        LoadingScreen.SetActive(false);
-        fadeWaitTime = 5f;
+        loadScene("NewMainScene");
+      }
+    } else if (gameEnd){
+      fadeWaitTime -= Time.deltaTime;
+      if(fadeWaitTime < 0){
+        gameEnd = false;   
+        loadScene("MainMenu");
       }
     }
   }
 
+  void loadScene(string scene){
+    switchingLevel = false;
+    loadingScreenActive = false;
+    loadingScreenText = "";
+    fadeWaitTime = 5f;
+    SceneManager.LoadScene(scene, LoadSceneMode.Single);
+  }
 
   void levelSelection(string level)
   {
-    Debug.Log("Hello from gameManager: " + level);
-    //animator.SetTrigger("FadeOut");
     levelName = level;
     switchingLevel = true;
-    // goofy = level;
-    // StartCoroutine(fadeInAndOutRepeat(lightToFade, eachFadeTime, fadeWaitTime));
-    FadeToLevel(1);
-    //switchingLevel = true;
-
+    loadingScreenActive = true;
   }
-
-  public void FadeToLevel(int levelIndex)
-  {
-    // Debug.Log("Fade to level");
-    LoadingScreen.SetActive(true);
-  }
-
   public string getLevelName()
   {
     return levelName;
@@ -109,7 +105,7 @@ public class GameManager : MonoBehaviour
     if (sheepHealth < 0)
     {
       sheepHealth = 0;
-      stopGame("Lose");
+      stopGame("lose");
     }
   }
 
@@ -136,9 +132,9 @@ public class GameManager : MonoBehaviour
   public void stopGame(string winOrLose)
   {
     // Stop the game!
-    Debug.Log("Stop game! " + winOrLose);
-    LoadingScreen.SetActive(true);
-    loadingScreenTextObject.GetComponent<TextMeshPro>().text = "You " + winOrLose + "!";
+    loadingScreenActive = true;
+    loadingScreenText = "You " + winOrLose + "!";
+    gameEnd = true;
 
   }
 
