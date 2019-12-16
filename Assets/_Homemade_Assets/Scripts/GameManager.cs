@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
 
   void levelSelection(string level)
   {
-    // Debug.Log("Hello from gameManager: " + level);
+    Debug.Log("Hello from gameManager: " + level);
     //animator.SetTrigger("FadeOut");
     levelName = level;
     // goofy = level;
