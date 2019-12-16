@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
   public GameObject LoadingScreen;
   public GameObject loadingScreenTextObject;
 
-  public GameObject mrPerson;
+ // public GameObject mrPerson;
 
   private float timeToDark = 3f;
   public float fadeWaitTime = 5f;
@@ -30,7 +30,8 @@ public class GameManager : MonoBehaviour
   private int sheepHealth = 100;
   private int wolfKill = 0;    // Used for wolf sign text
 
-  private float gameplayTimer = 300f; // Playtime for survival, 5 mins
+  //private float gameplayTimer = 300f; // Playtime for survival, 5 mins
+  private float gameplayTimer = 30f; // Playtime for survival, 5 mins
 
 
   void Awake()
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     DontDestroyOnLoad(this.gameObject);
-    DontDestroyOnLoad(mrPerson);
+   // DontDestroyOnLoad(mrPerson);
   }
 
   // Start is called before the first frame update
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
     // Switching from main menu to first level
     if (switchingLevel)
     {
+      Debug.Log("Switching level!");
       fadeWaitTime -= Time.deltaTime;
       loadingScreenTextObject.GetComponent<TextMeshPro>().text = Mathf.Ceil(fadeWaitTime).ToString();
       if (fadeWaitTime < 0)
@@ -82,10 +84,11 @@ public class GameManager : MonoBehaviour
     Debug.Log("Hello from gameManager: " + level);
     //animator.SetTrigger("FadeOut");
     levelName = level;
+    switchingLevel = true;
     // goofy = level;
     // StartCoroutine(fadeInAndOutRepeat(lightToFade, eachFadeTime, fadeWaitTime));
     FadeToLevel(1);
-    switchingLevel = true;
+    //switchingLevel = true;
 
   }
 
