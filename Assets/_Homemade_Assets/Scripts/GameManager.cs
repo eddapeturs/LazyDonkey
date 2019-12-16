@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
   private int sheepHealth = 100;
   private int wolfKill = 0;    // Used for wolf sign text
 
-  //private float gameplayTimer = 300f; // Playtime for survival, 5 mins
-  private float gameplayTimer = 10f; // Playtime for survival, 5 mins
+  private float gameplayTimer = 300f; // Playtime for survival, 5 mins
+  //private float gameplayTimer = 10f; // Playtime for survival, 5 mins
 
   private bool gameEnd = false;
 
