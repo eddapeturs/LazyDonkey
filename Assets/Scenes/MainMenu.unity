@@ -6303,6 +6303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 351275626}
+  - component: {fileID: 351275627}
   m_Layer: 0
   m_Name: LoadingScreen
   m_TagString: Untagged
@@ -6325,6 +6326,19 @@ Transform:
   m_Father: {fileID: 263589143412029119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &351275627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351275625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1850786fa82254b9a64f9e585dff8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreenTextObject: {fileID: 706899525}
 --- !u!1001 &356834489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12879,10 +12893,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: 
-  LoadingScreen: {fileID: 351275625}
-  loadingScreenTextObject: {fileID: 706899525}
-  mrPerson: {fileID: 263589142449916291}
+  loadingScreenActive: 0
   fadeWaitTime: 5
+  loadingScreenText: 
 --- !u!4 &694920963
 Transform:
   m_ObjectHideFlags: 0
