@@ -13,12 +13,12 @@ public class sheepHealthUpdater : MonoBehaviour
     void Start()
     {
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        sheepHealth = manager.getSheepHealth();
     }
 
     // Update is called once per frame
     void Update()
     {
+        sheepHealth = manager.getSheepHealth();
         textBox.text = sheepHealth.ToString();
     }
 }

@@ -241,7 +241,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263589142260739138}
-  - component: {fileID: 263589142265622112}
   - component: {fileID: 263589142259098520}
   m_Layer: 2
   m_Name: CenterEyeAnchor
@@ -264,14 +263,6 @@ Transform:
   m_Father: {fileID: 263589142260675846}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &263589142265622112
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263589142261035106}
-  m_Enabled: 1
 --- !u!20 &263589142259098520
 Camera:
   m_ObjectHideFlags: 0

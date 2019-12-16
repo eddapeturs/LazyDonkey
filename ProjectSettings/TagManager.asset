@@ -12,6 +12,7 @@ TagManager:
   - Bow
   - RightHand
   - LeftHand
+  - Wolf
   layers:
   - Default
   - TransparentFX

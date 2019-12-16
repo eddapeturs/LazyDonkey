@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
   // public string goofy = "Alex";
   //public bool IsStarted = true; // Is set when all bonfires get lid. // Think about having event trigger.
 
-  private string levelName;
+  public string levelName;
 
   public GameObject LoadingScreen;
   public GameObject loadingScreenTextObject;
@@ -33,10 +33,13 @@ public class GameManager : MonoBehaviour
 
   void Awake()
   {
-    if(instance != null && instance != this){
+    if (instance != null && instance != this)
+    {
       Destroy(this.gameObject);
       return;
-    } else {
+    }
+    else
+    {
       instance = this;
     }
 
@@ -56,10 +59,12 @@ public class GameManager : MonoBehaviour
   void Update()
   {
     // Switching from main menu to first level
-    if(switchingLevel){
+    if (switchingLevel)
+    {
       fadeWaitTime -= Time.deltaTime;
-      loadingScreenTextObject.GetComponent<TextMeshPro>().text =  Mathf.Ceil(fadeWaitTime).ToString();
-      if(fadeWaitTime < 0){
+      loadingScreenTextObject.GetComponent<TextMeshPro>().text = Mathf.Ceil(fadeWaitTime).ToString();
+      if (fadeWaitTime < 0)
+      {
         SceneManager.LoadScene("NewMainScene", LoadSceneMode.Single);
         switchingLevel = false;
         fadeWaitTime = 5f;
@@ -68,8 +73,9 @@ public class GameManager : MonoBehaviour
   }
 
 
-  void levelSelection(string level){
-    Debug.Log("Hello from gameManager: " + level);
+  void levelSelection(string level)
+  {
+    // Debug.Log("Hello from gameManager: " + level);
     //animator.SetTrigger("FadeOut");
     levelName = level;
     // goofy = level;
@@ -79,33 +85,51 @@ public class GameManager : MonoBehaviour
 
   }
 
-  public void FadeToLevel(int levelIndex){
-    Debug.Log("Fade to level");
+  public void FadeToLevel(int levelIndex)
+  {
+    // Debug.Log("Fade to level");
     LoadingScreen.SetActive(true);
   }
 
-  public string getLevelName(){
+  public string getLevelName()
+  {
     return levelName;
   }
 
-  public void updateSheepHealth(){
-    sheepHealth--;
+  public void updateSheepHealth(int amount)
+  {
+    sheepHealth -= amount;
+    if (sheepHealth < 0)
+    {
+      sheepHealth = 0;
+      stopGame("Lose");
+    }
   }
 
-  public int getSheepHealth(){
+  public int getSheepHealth()
+  {
     return sheepHealth;
   }
 
-  public void updateWolfKill(){
+  public void updateWolfKill()
+  {
     wolfKill++;
   }
 
-  public int getWolfKills(){
+  public int getWolfKills()
+  {
     return wolfKill;
   }
 
-  public float getGameplayTimer(){
+  public float getGameplayTimer()
+  {
     return gameplayTimer;
+  }
+
+  public void stopGame(string winOrLose)
+  {
+    // Stop the game!
+    Debug.Log("Stop game! " + winOrLose);
   }
 
 }

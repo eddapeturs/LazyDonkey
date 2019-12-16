@@ -57,7 +57,7 @@ public class WolfSounds : MonoBehaviour
     if (AudioEmitFreq < 0)
     {
       playHowl();
-      AudioEmitFreq = Random.Range(25, 50);
+      AudioEmitFreq = Random.Range(100, 500);
     }
   }
 

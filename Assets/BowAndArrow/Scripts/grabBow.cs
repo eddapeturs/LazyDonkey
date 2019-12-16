@@ -15,7 +15,7 @@ public class grabBow : MonoBehaviour
   public GameObject LeftHand;
   public GameObject RightHand;
 
-  public GameObject OppositeHand = null;
+  public GameObject OppositeHand;
 
   // Start is called before the first frame update
   void Start()
@@ -70,6 +70,7 @@ public class grabBow : MonoBehaviour
   void spawnBow(GameObject hand, GameObject otherHand)
   {
     OppositeHand = otherHand;
+
     currBow = Instantiate(m_bow, hand.transform.position, hand.transform.rotation);
     currBow.transform.parent = hand.transform;
     hand.gameObject.transform.GetComponent<SphereCollider>().enabled = false;

@@ -20,11 +20,16 @@ public class timerUpdater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameplayTimer -= Time.deltaTime;
+        if(gameplayTimer >= 0){
+            gameplayTimer -= Time.deltaTime;
 
-        string minutes = Mathf.Floor(gameplayTimer / 60).ToString("00");
-        string seconds = (gameplayTimer % 60).ToString("00");
+            string minutes = Mathf.Floor(gameplayTimer / 60).ToString("00");
+            string seconds = (gameplayTimer % 60).ToString("00");
 
-        textBox.text = string.Format("{0}:{1}", minutes, seconds);
+            textBox.text = string.Format("{0}:{1}", minutes, seconds);
+        } else {
+            gameplayTimer = 0;
+            manager.stopGame("Win");
+        }
     }
 }
