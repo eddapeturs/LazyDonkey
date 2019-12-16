@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
   private int wolfKill = 0;    // Used for wolf sign text
 
   private float gameplayTimer = 300f; // Playtime for survival, 5 mins
-  //private float gameplayTimer = 10f; // Playtime for survival, 5 mins
+ // private float gameplayTimer = 10f; // Playtime for survival, 5 mins
 
   private bool gameEnd = false;
 
@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
     loadingScreenText = "";
     fadeWaitTime = 5f;
     SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    Reset();
   }
 
   void levelSelection(string level)
@@ -135,7 +136,12 @@ public class GameManager : MonoBehaviour
     loadingScreenActive = true;
     loadingScreenText = "You " + winOrLose + "!";
     gameEnd = true;
+  }
 
+  void Reset(){
+      sheepHealth = 100;
+      wolfKill = 0;    // Used for wolf sign text 
+      gameplayTimer = 300f; // Playtime for survival, 5 mins
   }
 
 }

@@ -1747,7 +1747,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Easy
-  manager: {fileID: 694920961}
 --- !u!135 &75639384
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17356,7 +17355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Hard
-  manager: {fileID: 694920961}
 --- !u!1001 &866470193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28517,7 +28515,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Medium
-  manager: {fileID: 694920961}
 --- !u!1001 &1445855710
 PrefabInstance:
   m_ObjectHideFlags: 0
