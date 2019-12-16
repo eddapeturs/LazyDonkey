@@ -28,7 +28,7 @@ public class SheepHealth : MonoBehaviour
       col.gameObject.transform.parent = gameObject.transform;
       StartCoroutine(startDamage());
       //wolfMultiplier = gameObject.transform.childCount;
-      // Debug.Log("Wolf multiplier : " + wolfMultiplier);
+      Debug.Log("Wolf multiplier : " + wolfMultiplier);
     }
   }
 
@@ -37,7 +37,7 @@ public class SheepHealth : MonoBehaviour
     // Debug.Log("Start damage : " + wolfMultiplier);
     if (!coroutineStarted)
     {
-      while (wolfMultiplier > 0)
+      while (true)
       {
         yield return new WaitForSeconds(1f);
         updateHealth();
